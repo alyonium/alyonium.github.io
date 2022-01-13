@@ -48,7 +48,7 @@
         order-md="2"
         order="1">
       <animated-border-wrapper style="position: relative">
-        <img src="../../assets/img/myFace.jpeg" alt="it's me" class="photo">
+        <img src="../../assets/img/me.jpeg" alt="it's me" class="photo">
       </animated-border-wrapper>
     </v-col>
   </v-row>
