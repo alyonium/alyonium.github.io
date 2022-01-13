@@ -3,12 +3,14 @@
   "ru": {
     "success-message": "Ваше сообщение отправлено",
     "placeholder-message": "Сообщение",
-    "button-sent": "Отправить"
+    "button-sent": "Отправить",
+    "contact": "Ваши контактные данные"
   },
   "en": {
     "success-message": "Message sent successfully",
     "placeholder-message": "Message",
-    "button-sent": "Sent"
+    "button-sent": "Sent",
+    "contact": "Your contact"
   }
 }
 </i18n>
@@ -36,11 +38,11 @@
             cols="12"
           >
             <v-text-field
-              v-model="form.email"
-              :rules="rules.email"
-              type="email"
+              v-model="form.contact"
+              :rules="rules.contact"
+              type="contact"
               color="purple lighten-2"
-              label="E-mail"
+              :label="`${$t('contact')}`"
             ></v-text-field>
           </v-col>
           <v-col cols="12">
@@ -76,20 +78,16 @@
 <script>
 import { sendMessage } from '@/resources';
 
-const emailRegExp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
 export default {
   name: 'WriteMe',
   data() {
     const defaultForm = Object.freeze({
-      email: '',
+      contact: '',
       message: '',
     });
     return {
       form: { ...defaultForm },
       rules: {
-        email: [(val) => (val || '').length > 0 || '❗❗❗',
-          (val) => emailRegExp.test(val) || '❌'],
         message: [(val) => (val || '').length > 0 || '❗❗❗'],
       },
       snackbar: false,
@@ -102,7 +100,7 @@ export default {
       this.snackbar = true;
     },
     async validate() {
-      await sendMessage(this.form.email, this.form.message);
+      await sendMessage(this.form.contact, this.form.message);
     },
   },
 };

@@ -25,11 +25,13 @@
       >
         <div class="images-container">
           <img
+            v-if="work.images.laptop"
             :src="`${$backendUrl}${work.images.laptop}`"
             alt="laptop"
             class="laptop"
           >
           <img
+            v-if="work.images.phone"
             :src="`${$backendUrl}${work.images.phone}`"
             alt="laptop"
             class="phone"
@@ -66,8 +68,8 @@
         offset-md="6"
         class="d-flex justify-md-start justify-center">
         <div class="d-flex flex-column source-block">
-          <a :href="work.source" target="_blank">{{ $t('source') }}</a>
-          <a :href="work.online" target="_blank">{{ $t('online') }}</a>
+          <a v-if="work.source" :href="work.source" target="_blank">{{ $t('source') }}</a>
+          <a v-if="work.online" :href="work.online" target="_blank">{{ $t('online') }}</a>
           <p>{{ work.year }}</p>
         </div>
       </v-col>

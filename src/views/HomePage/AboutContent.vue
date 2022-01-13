@@ -2,19 +2,19 @@
 {
   "ru": {
     "name": "Алёна",
-    "age": "лет",
+    "age": "год",
     "country": "Россия",
     "city": "Санкт-Петербург",
-    "university": "БГТУ \"Военмех\"",
-    "experience": "год"
+    "university": "программная инженерия",
+    "experience": "года опыта"
   },
   "en": {
     "name": "Alona",
     "age": "y/o",
     "country": "Russia",
     "city": "Saint-Petersburg",
-    "university": "BSTU \"Voenmeh\"",
-    "experience": "year"
+    "university": "software engineering",
+    "experience": "years of experience"
   }
 }
 </i18n>
@@ -30,11 +30,11 @@
       <p
         class="slide-text">
         💅🏼 {{ $t('name') }}<br>
-        🎂 20 {{ $t('age') }}<br>
+        🎂 21 {{ $t('age') }}<br>
         🌏 {{ $t('country') }}, <nobr>{{ $t('city') }}</nobr><br>
         👩‍🏫 {{ $t('university') }}<br>
         ❤️ frontend<br>
-        👩‍💻 1 {{ $t('experience') }}<br>
+        👩‍💻 2 {{ $t('experience') }}<br>
         👄 🇷🇺 🇺🇸<br>
       </p>
     </v-col>

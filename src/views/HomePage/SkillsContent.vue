@@ -1,13 +1,3 @@
-<i18n>
-{
-  "ru": {
-    "bem": "БЭМ"
-  },
-  "en": {
-    "bem": "BEM"
-  }
-}
-</i18n>
 <template>
   <v-row
     class="no-gutters pt-md-8 pt-sm-4 pt-2 pb-5 pa-0 d-sm-flex justify-sm-center col-content">
@@ -17,12 +7,13 @@
       offset-md="1"
       offset="0"
     >
-      <bracket-wrapper title="#front + #back" size="small">
-        <p>HTML5, {{ $t('bem') }}<br>
+      <bracket-wrapper title="#main-stack" size="small">
+        <p>
+          Vue2, Vue3<br>
           CSS3, SCSS<br>
-          JavaScript (ES6)<br>
-          Vue, Node<br>
-          Express, Axios<br>
+          JavaScript<br>
+          TypeScript<br>
+          Node<br>
         </p>
       </bracket-wrapper>
     </v-col>
@@ -46,11 +37,12 @@
       offset="0"
     >
       <bracket-wrapper title="&.also" size="small">
-        <p>Figma, Photoshop<br>
-          Git, Subversion<br>
-          Github, Bitbucket<br>
+        <p>
+          Express, Axios<br>
+          Nuxt, SQLite<br>
+          Canvas<br>
+          Figma, Photoshop<br>
           English B1<br>
-          TypeScript<br>
         </p>
       </bracket-wrapper>
     </v-col>
