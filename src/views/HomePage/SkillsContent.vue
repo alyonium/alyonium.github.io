@@ -9,7 +9,7 @@
     >
       <bracket-wrapper title="#main-stack" size="small">
         <p>
-          Vue2, Vue3<br>
+          React, Vue<br>
           CSS3, SCSS<br>
           JavaScript<br>
           TypeScript<br>
@@ -41,7 +41,7 @@
           Express, Axios<br>
           Nuxt, SQLite<br>
           Canvas<br>
-          Figma, Photoshop<br>
+          Figma<br>
           English B1<br>
         </p>
       </bracket-wrapper>

@@ -25,7 +25,7 @@
         <write-me></write-me>
       </animated-border-wrapper>
       <div class="icons mt-5 d-flex flex-wrap justify-center">
-        <a href="mailto:alyonium2.0@gmail.com" target="_blank">
+        <a href="mailto:alyonium.work@gmail.com" target="_blank">
           <svg class="mr-sm-2 ml-sm-2 mt-sm-0 mr-6 ml-6 mt-3" xmlns="http://www.w3.org/2000/svg" version="1.1" width="40" height="40" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve"><g><path xmlns="http://www.w3.org/2000/svg" d="m12 24c6.624 0 12-5.376 12-12s-5.376-12-12-12-12 5.376-12 12 5.376 12 12 12zm4.283-12.857h1.718v-1.717h1.718v1.718h1.703v1.718h-1.703v1.718h-1.718v-1.718h-1.718zm-3.687-3.581-1.626 1.578c-2.08-2.033-6.127-.552-6.127 2.855 0 4.621 6.559 4.937 7.128 1.2h-3.392v-2.061h5.657c.642 3.356-1.525 6.866-5.657 6.866v.001c-3.329 0-6.001-2.686-6.001-6.001.001-5.338 6.333-7.861 10.018-4.438z" fill="#f06292" data-original="#f44336" style="" class=""/></g></svg>
         </a>
         <a href="https://github.com/alyonium" target="_blank">

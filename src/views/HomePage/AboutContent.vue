@@ -2,19 +2,17 @@
 {
   "ru": {
     "name": "Алёна",
-    "age": "год",
-    "country": "Россия",
-    "city": "Санкт-Петербург",
+    "age": "0 лет | {n} год | {n} года | {n} лет",
+    "work": "удаленная работа",
     "university": "программная инженерия",
-    "experience": "года опыта"
+    "experience": "0 лет опыта | {n} год опыта | {n} года опыта | {n} лет опыта"
   },
   "en": {
     "name": "Alona",
-    "age": "y/o",
-    "country": "Russia",
-    "city": "Saint-Petersburg",
+    "age": "{count} years old | {count} year old | {count} years old",
+    "work": "remote",
     "university": "software engineering",
-    "experience": "years of experience"
+    "experience":  "{count} years of experience | {count} year of experience | {count} years of experience"
   }
 }
 </i18n>
@@ -30,11 +28,11 @@
       <p
         class="slide-text">
         💅🏼 {{ $t('name') }}<br>
-        🎂 21 {{ $t('age') }}<br>
-        🌏 {{ $t('country') }}, <nobr>{{ $t('city') }}</nobr><br>
+        🎂 {{ $tc('age', age) }}<br>
+        🌏 {{ $t('work')}}<br>
         👩‍🏫 {{ $t('university') }}<br>
         ❤️ frontend<br>
-        👩‍💻 2 {{ $t('experience') }}<br>
+        👩‍💻 {{ $tc('experience', experience) }}<br>
         👄 🇷🇺 🇺🇸<br>
       </p>
     </v-col>
@@ -61,6 +59,30 @@ export default {
   name: 'AboutContent',
   components: {
     AnimatedBorderWrapper,
+  },
+  data() {
+    return {
+      experience: null,
+      age: null,
+    };
+  },
+  created() {
+    this.experience = this.getYears(2019, 8, 1);
+    this.age = this.getYears(2001, 0, 31);
+  },
+  methods: {
+    getYears(year, month, day) {
+      const today = new Date();
+      const startDate = new Date(year, month, day);
+      const months = today.getMonth() - startDate.getMonth();
+      let years = today.getFullYear() - startDate.getFullYear();
+
+      if (months < 0 || (months === 0 && today.getDate() < startDate.getDate())) {
+        years -= 1;
+      }
+
+      return years;
+    },
   },
 };
 </script>
