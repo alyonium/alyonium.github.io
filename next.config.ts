@@ -6,8 +6,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/alyonium.github.io',
-  assetPrefix: '/alyonium.github.io/',
   reactStrictMode: true,
 };
 
