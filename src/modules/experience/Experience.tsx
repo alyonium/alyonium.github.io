@@ -1,4 +1,6 @@
 import ModuleWrapper from '@/components/moduleWrapper/ModuleWrapper';
+import Image from 'next/image';
+import forsLogo from '/public/fors-logo.webp';
 
 const Experience = () => {
   const data = [
@@ -10,7 +12,7 @@ const Experience = () => {
       projects: [
         {
           name: 'Veterinary Pharma Monitoring',
-          stack: 'React',
+          stack: 'React, Formik',
           description:
             'Developed a new module for an existing system. Created new pages and reusable components, working with complex nested forms and validation logic. Worked in a frontend team of 2 developers. Collaborated with backend lead, QA, PM, and analysts.',
         },
@@ -63,46 +65,46 @@ const Experience = () => {
   ];
 
   return (
-    <div className='flex flex-col h-full w-full'>
-      <div className='flex flex-col'>
-        <ModuleWrapper name='.experience'>
-          <div className='pl-10 flex flex-col gap-y-8'>
-            {data.map((item, index) => {
-              return (
-                <div key={index} className='flex flex-col'>
-                  <div className='w-full flex justify-between'>
-                    <span className='text-xl font-primary text-blue-200 pb-5'>
-                      {item.company},{' '}
-                      <span className='italic'>{item.format}</span>
-                    </span>
-                    <span className='text-xl font-primary text-blue-200 pb-5'>
-                      {item.date}
-                    </span>
-                  </div>
+    <ModuleWrapper name='.experience'>
+      <div className='flex flex-col xl:gap-y-8 gap-y-6'>
+        {data.map((item, index) => {
+          return (
+            <div key={index} className='flex flex-col'>
+              <div className='w-full flex justify-between sm:flex-row flex-col pb-5'>
+                <span className='flex items-center gap-2 lg:text-xl text-lg font-primary text-blue-200'>
+                  <span>
+                    <Image
+                      className='rounded-xs w-5'
+                      src={forsLogo}
+                      alt='logo of the company "FORS"'
+                    />
+                  </span>
+                  {item.company}, <span className='italic'>{item.format}</span>
+                </span>
+                <span className='lg:text-xl sm:text-lg text-md font-primary text-blue-200'>
+                  {item.date}
+                </span>
+              </div>
 
-                  {item.projects.map((project) => {
-                    return (
-                      <>
-                        <span className='w-full'>
-                          {project.name && (
-                            <span className='text-lg font-primary text-blue-200 pb-5'>
-                              {project.name} ({project.stack})
-                            </span>
-                          )}
-                        </span>
-                        <span className='text-md font-primary text-blue-200 pb-5'>
-                          {project.description}
-                        </span>
-                      </>
-                    );
-                  })}
-                </div>
-              );
-            })}
-          </div>
-        </ModuleWrapper>
+              {item.projects.map((project, index) => {
+                return (
+                  <span key={index}>
+                    {project.name && (
+                      <span className='lg:text-lg text-md font-primary text-blue-200 pb-2'>
+                        {project.name} ({project.stack})
+                      </span>
+                    )}
+                    <span className='lg:text-md text-sm font-primary text-blue-200 pb-5'>
+                      {project.description}
+                    </span>
+                  </span>
+                );
+              })}
+            </div>
+          );
+        })}
       </div>
-    </div>
+    </ModuleWrapper>
   );
 };
 

@@ -1,41 +1,36 @@
 import ModuleWrapper from '@/components/moduleWrapper/ModuleWrapper';
-import { getYears } from '@/utils/getYears';
+import { getYearsSince } from '@/utils/getYearsSince';
 import { BIRTHDAY, START_WORK } from '@/const/const';
 import Image from 'next/image';
 import personalPhoto from '/public/personalPhoto.webp';
 
 const About = () => {
+  const data = [
+    '😊 Alena Stovpets',
+    `🎂 ${getYearsSince(BIRTHDAY)} years old`,
+    '💙️ Frontend',
+    '👩‍🏫 B.Sc. in Software Engineering',
+    `👩‍💻 ${getYearsSince(START_WORK)} years of experience`,
+  ];
+
   return (
-    <div className='flex flex-col w-full'>
-      <ModuleWrapper name='#about'>
-        <div className='pl-10 flex flex-row gap-x-8 align-center justify-between w-full'>
-          <div className='flex flex-col justify-center'>
-            <span className='text-2xl font-primary text-blue-200 pb-5'>
-              😊 Alena Stovpets
+    <ModuleWrapper name='(aboutMe) =>'>
+      <div className='flex flex-col-reverse lg:flex-row gap-y-5 lg:gap-x-6 items-center justify-between w-full'>
+        <div className='flex flex-col justify-center'>
+          {data.map((item, index) => (
+            <span
+              key={index}
+              className='text-lg md:text-xl 2xl:text-2xl font-primary text-blue-200 pb-2 md:pb-3 2xl:pb-5'
+            >
+              {item}
             </span>
-            <span className='text-2xl font-primary text-blue-200 pb-5'>
-              🎂 {getYears(BIRTHDAY)} years old
-            </span>
-            <span className='text-2xl font-primary text-blue-200 pb-5'>
-              💙️ Frontend
-            </span>
-            <span className='text-2xl font-primary text-blue-200 pb-5'>
-              👩‍🏫 B.Sc. in Software Engineering
-            </span>
-            <span className='text-2xl font-primary text-blue-200 pb-5'>
-              👩‍💻 {getYears(START_WORK)} years of experience
-            </span>
-          </div>
-          <div className='w-[400px] border-sky-200 border-2'>
-            <Image
-              src={personalPhoto}
-              alt={'personal photo'}
-              className='z-20'
-            />
-          </div>
+          ))}
         </div>
-      </ModuleWrapper>
-    </div>
+        <div className='w-[200px] sm:w-[280px] md:w-[300px] lg:w-[300px] 2xl:w-[400px] h-full border-sky-200 border-2'>
+          <Image src={personalPhoto} alt='personal photo' className='z-20' />
+        </div>
+      </div>
+    </ModuleWrapper>
   );
 };
 

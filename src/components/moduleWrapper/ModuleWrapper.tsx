@@ -8,38 +8,28 @@ const ModuleWrapper = ({
 }: {
   children: ReactNode;
   name: string;
-  bracketType: BRACKET;
+  bracketType?: BRACKET;
 }) => {
-  switch (bracketType) {
-    case BRACKET.curly:
-      return (
-        <>
-          <span className='text-5xl font-primary heading-text-shadow-colored text-sky-200 pb-10 justify-start'>
-            {name} &#123;
-          </span>
+  const brackets = { left: '{', right: '}' };
 
-          {children}
-
-          <span className='text-5xl font-primary heading-text-shadow-colored text-sky-200 pt-5 justify-end'>
-            &#125;
-          </span>
-        </>
-      );
-    case BRACKET.square:
-      return (
-        <>
-          <span className='text-5xl font-primary heading-text-shadow-colored text-sky-200 pb-10 justify-start'>
-            {name} [
-          </span>
-
-          {children}
-
-          <span className='text-5xl font-primary heading-text-shadow-colored text-sky-200 pt-5 justify-end'>
-            ]
-          </span>
-        </>
-      );
+  if (bracketType === BRACKET.square) {
+    brackets.left = '[';
+    brackets.right = ']';
   }
+
+  return (
+    <div className='flex flex-col'>
+      <span className='xl:text-5xl sm:text-4xl text-3xl font-primary heading-text-shadow-colored text-sky-200 xl:pb-10 pb-8 justify-start'>
+        {name} {brackets.left}
+      </span>
+
+      <div className='xl:pl-10 sm:pl-8 pl-5 w-full'>{children}</div>
+
+      <span className='xl:text-5xlsm:text-4xl text-3xl font-primary heading-text-shadow-colored text-sky-200 xl:pt-5 pt-4 justify-end'>
+        {brackets.right}
+      </span>
+    </div>
+  );
 };
 
 export default ModuleWrapper;

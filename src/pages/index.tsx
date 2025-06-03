@@ -3,7 +3,7 @@ import Cover from '@/modules/cover/Cover';
 import PageWrapper from '@/components/pageWrapper/PageWrapper';
 import About from '@/modules/about/About';
 import Experience from '@/modules/experience/Experience';
-import Projects from '@/modules/projects/Projects';
+import Freelance from '@/modules/freelance/Freelance';
 import Footer from '@/modules/footer/Footer';
 
 const geistSans = Geist({
@@ -25,7 +25,7 @@ export default function Home() {
         <Cover />
         <About />
         <Experience />
-        <Projects />
+        <Freelance />
         <Footer />
       </PageWrapper>
     </div>
