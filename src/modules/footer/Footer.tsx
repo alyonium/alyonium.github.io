@@ -4,9 +4,7 @@ import Link from 'next/link';
 const Footer = () => {
   return (
     <div className='flex justify-between pb-10'>
-      <span className='font-primary text-blue-200'>
-        alyonium © {getYear()}
-      </span>
+      <span className='font-primary text-blue-200'>alyonium ©{getYear()}</span>
       <div className='flex gap-x-2'>
         <Link href='https://t.me/alyonium'>
           <svg
