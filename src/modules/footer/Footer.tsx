@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <div className='flex justify-between pb-10'>
+    <div className='flex justify-between items-center pb-10'>
       <span className='font-primary text-blue-200'>
         alyonium © {getYear()}
       </span>

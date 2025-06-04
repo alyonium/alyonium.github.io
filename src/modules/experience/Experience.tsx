@@ -69,8 +69,8 @@ const Experience = () => {
       <div className='flex flex-col xl:gap-y-8 gap-y-6'>
         {data.map((item, index) => {
           return (
-            <div key={index} className='flex flex-col'>
-              <div className='w-full flex justify-between sm:flex-row flex-col pb-5'>
+            <div key={index} className='flex flex-col gap-y-7'>
+              <div className='w-full flex justify-between sm:flex-row flex-col'>
                 <span className='flex items-center gap-2 lg:text-xl text-lg font-primary text-blue-200'>
                   <span>
                     <Image
@@ -88,16 +88,16 @@ const Experience = () => {
 
               {item.projects.map((project, index) => {
                 return (
-                  <span key={index}>
+                  <div key={index} className='flex flex-col'>
                     {project.name && (
-                      <span className='lg:text-lg text-md font-primary text-blue-200 pb-2'>
+                      <span className='lg:text-xl text-md font-primary text-blue-200 pb-3'>
                         {project.name} ({project.stack})
                       </span>
                     )}
-                    <span className='lg:text-md text-sm font-primary text-blue-200 pb-5'>
+                    <span className='lg:text-lg text-sm font-primary text-blue-200'>
                       {project.description}
                     </span>
-                  </span>
+                  </div>
                 );
               })}
             </div>
