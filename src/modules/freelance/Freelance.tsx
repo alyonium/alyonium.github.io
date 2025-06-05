@@ -44,7 +44,7 @@ const Freelance = () => {
               className='flex 2xl:flex-row flex-col-reverse  xl:gap-x-8 lg:gap-x-6 gap-y-5 items-center justify-between w-full'
               key={index}
             >
-              <div className='2xl:w-1/2 flex flex-col gap-y-4 justify-center w-full'>
+              <div className='2xl:w-1/2 flex flex-col gap-y-4 justify-center w-full backdrop-blur-sm'>
                 <span className='w-full flex justify-between items-center 2xl:text-2xl xl:text-2xl lg:text-xl md:text-xl sm:text-lg text-lg font-primary text-blue-200'>
                   <span>{item.name}, </span> <span>{item.year}</span>
                 </span>

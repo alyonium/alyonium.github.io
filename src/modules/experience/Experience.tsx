@@ -69,7 +69,7 @@ const Experience = () => {
       <div className='flex flex-col xl:gap-y-8 gap-y-6'>
         {data.map((item, index) => {
           return (
-            <div key={index} className='flex flex-col gap-y-7'>
+            <div key={index} className='flex flex-col gap-y-7 backdrop-blur-sm'>
               <div className='w-full flex justify-between sm:flex-row flex-col'>
                 <span className='flex items-center gap-2 lg:text-xl text-lg font-primary text-blue-200'>
                   <span>

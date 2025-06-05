@@ -16,7 +16,7 @@ const About = () => {
   return (
     <ModuleWrapper name='(aboutMe) =>'>
       <div className='flex flex-col-reverse lg:flex-row gap-y-5 lg:gap-x-6 items-center justify-between w-full'>
-        <div className='flex flex-col justify-center'>
+        <div className='flex flex-col justify-center backdrop-blur-sm'>
           {data.map((item, index) => (
             <span
               key={index}
