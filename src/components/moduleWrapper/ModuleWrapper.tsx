@@ -18,7 +18,7 @@ const ModuleWrapper = ({
   }
 
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col backdrop-blur-sm'>
       <span className='xl:text-5xl sm:text-4xl text-3xl font-primary heading-text-shadow-colored text-sky-200 xl:pb-10 pb-8 justify-start'>
         {name} {brackets.left}
       </span>
