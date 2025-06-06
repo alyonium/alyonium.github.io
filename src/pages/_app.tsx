@@ -15,12 +15,12 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name='author' content='Alena Stovpets' />
         <meta
           name='description'
-          content="I'm Alena, a frontend developer. Nice to meet you 🙂"
+          content='Frontend developer with 5 years of experience, mainly in JavaScript/Typescript (React, Vue). Proven background in commercial software development and freelance projects. Skilled in Figma and UI design. Graduated in 2023 with a degree in Software Engineering from Baltic State Technical University. Fluent in Russian (native), intermediate English (B1). Looking for a remote middle frontend developer position with English or Russian communication. Authorized to work in Spain and the EU.'
         />
         <meta property='og:title' content='alyonium' />
         <meta
           property='og:description'
-          content="I'm Alena, a frontend developer. Nice to meet you 🙂"
+          content='Frontend developer with 5 years of experience, mainly in JavaScript/Typescript (React, Vue). Proven background in commercial software development and freelance projects. Skilled in Figma and UI design. Graduated in 2023 with a degree in Software Engineering from Baltic State Technical University. Fluent in Russian (native), intermediate English (B1). Looking for a remote middle frontend developer position with English or Russian communication. Authorized to work in Spain and the EU.'
         />
         <meta property='og:url' content='https://alyonium.github.io/' />
         <meta property='og:type' content='website' />
