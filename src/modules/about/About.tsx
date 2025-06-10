@@ -1,18 +1,9 @@
 import ModuleWrapper from '@/components/moduleWrapper/ModuleWrapper';
-import { getYearsSince } from '@/utils/getYearsSince';
-import { BIRTHDAY, START_WORK } from '@/const/const';
 import Image from 'next/image';
 import personalPhoto from '/public/personalPhoto.webp';
+import { data } from '@/modules/about/data';
 
 const About = () => {
-  const data = [
-    '😊 Alena Stovpets',
-    `🎂 ${getYearsSince(BIRTHDAY)} years old`,
-    '💙️ Frontend',
-    '👩‍🏫 B.Sc. in Software Engineering',
-    `👩‍💻 ${getYearsSince(START_WORK)} years of experience`,
-  ];
-
   return (
     <ModuleWrapper name='(aboutMe) =>'>
       <div className='flex flex-col-reverse lg:flex-row gap-y-5 lg:gap-x-6 items-center justify-between w-full'>
