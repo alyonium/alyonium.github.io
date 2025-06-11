@@ -78,7 +78,7 @@ export const data: ExperienceType[] = [
         name: null,
         stack: null,
         description:
-          'Supported legacy projects using HTML/CSS/JavaScript (jQuery).',
+          'Supported legacy projects using HTML/CSS/JavaScript (jQuery), Canvas.',
       },
     ],
   },
