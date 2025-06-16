@@ -28,6 +28,10 @@ export default function App({ Component, pageProps }: AppProps) {
           property='og:image'
           content='https://alyonium.github.io/og-image.png'
         />
+        <meta
+          name='google-site-verification'
+          content='HrstD_Uoa8Eb9pvsadWH6teoRTO6T6UZllaG2GjznVs'
+        />
       </Head>
       <Component {...pageProps} />
     </>
