@@ -25,7 +25,7 @@ const ModuleWrapper = ({
 
       <div className='xl:pl-10 sm:pl-8 pl-5 w-full'>{children}</div>
 
-      <span className='xl:text-5xlsm:text-4xl text-3xl font-primary heading-text-shadow-colored text-sky-200 xl:pt-5 pt-4 justify-end'>
+      <span className='xl:text-5xl sm:text-4xl text-3xl font-primary heading-text-shadow-colored text-sky-200 xl:pt-5 pt-4 justify-end'>
         {brackets.right}
       </span>
     </div>

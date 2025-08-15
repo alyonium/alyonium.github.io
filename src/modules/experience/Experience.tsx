@@ -1,6 +1,5 @@
 import ModuleWrapper from '@/components/moduleWrapper/ModuleWrapper';
 import Image from 'next/image';
-import forsLogo from '/public/fors-logo.webp';
 import { data } from '@/modules/experience/data';
 
 const Experience = () => {
@@ -18,8 +17,8 @@ const Experience = () => {
                   <span>
                     <Image
                       className='rounded-xs w-5'
-                      src={forsLogo}
-                      alt='logo of the company "FORS"'
+                      src={item.logo}
+                      alt={`logo of the company "${item.company}"`}
                     />
                   </span>
                   {item.company}, <span className='italic'>{item.format}</span>

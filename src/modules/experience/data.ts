@@ -1,3 +1,7 @@
+import { ImageProps } from 'next/image';
+import forsLogo from '/public/fors-logo.webp';
+import layersLogo from '/public/layers-logo.webp';
+
 type ProjectType = {
   id: string;
   name: string | null;
@@ -11,16 +15,34 @@ type ExperienceType = {
   title: string;
   format: string;
   date: string;
+  logo: ImageProps['src'];
   projects: ProjectType[];
 };
 
 export const data: ExperienceType[] = [
+  {
+    id: 'd4aeaea9-3148-4aae-ade8-765784f333ca',
+    company: 'LAYERS',
+    title: 'Frontend Developer',
+    format: 'remote',
+    date: 'Aug 2025 - present',
+    logo: layersLogo,
+    projects: [
+      {
+        id: '6a2b559e-6409-4a76-9a35-e23bfe4befbc',
+        name: 'Layers Web Application',
+        stack: 'Next.js, RTQ, Shadcn, Tailwind, Playwright',
+        description: '',
+      },
+    ],
+  },
   {
     id: '2417dc9b-e2c9-47b3-aa9d-de2dbe6973d8',
     company: 'FORS',
     title: 'Frontend Developer',
     format: 'remote',
     date: 'Oct 2020 – May 2025',
+    logo: forsLogo,
     projects: [
       {
         id: '6a2b559e-6409-4a76-9a35-e23bfe4befbc',
@@ -58,6 +80,7 @@ export const data: ExperienceType[] = [
     title: 'Junior Frontend Developer',
     format: 'remote',
     date: 'Sep 2019 – Oct 2020',
+    logo: forsLogo,
     projects: [
       {
         id: '4d21d8b8-e425-4cfb-8769-d64c342c923c',
